@@ -1,101 +1,57 @@
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
 import Image from "next/image";
+import { FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa"; // Import icons from react-icons
+import hero from "../public/hero.jpg";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-200px)] px-8">
+      
+      {/* Image Section */}
+      <div className="flex-shrink-0 mb-8 lg:mb-0 lg:mr-8">
+        <div className="rounded-full overflow-hidden h-60 w-60 md:h-80 md:w-80 shadow-lg mx-auto  ">
+          <Image
+            src={hero}
+            alt="Hero" 
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      
+      {/* Text Section */}
+      <div className="flex flex-col items-center justify-center text-center lg:text-left">
+        <h1 className="lg:text-6xl sm:text-4xl  font-bold mb-4 ">Hello, I am Hashir</h1>
+        <p className="lg:text-xl  mb-8 max-w-2xl">
+          I'm a passionate <span>Front-End</span> web developer specializing in creating responsive and user-friendly websites.
+          With expertise in React, Next.js, and modern web technologies, I bring ideas to life through code.
+        </p>
+
+        {/* Button Section */}
+        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
+          <Button asChild>
+            <Link href="/projects">View My Projects</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/contact">Contact Me</Link>
+          </Button>
+        </div>
+
+        <div className="flex space-x-4 mt-6">
+          <Link href="https://www.instagram.com/eyemnoob/" target="_blank" aria-label="Instagram">
+            <FaInstagram className="text-primary hover:text-accent text-2xl" />
+          </Link>
+          <Link href="https://www.facebook.com/hashirdada.irshad" target="_blank" aria-label="Facebook">
+            <FaFacebookF className="text-primary hover:text-accent text-2xl" />
+          </Link>
+          <Link href="https://linkedin.com/in/hashir-hussain-1a5a3b2ba" target="_blank" aria-label="LinkedIn">
+            <FaLinkedinIn className="text-primary hover:text-accent text-2xl" />
+          </Link>
+          <Link href="https://github.com/hashir-qt" target="_blank" aria-label="GitHub">
+            <FaGithub className="text-primary hover:text-accent text-2xl" />
+          </Link>
+        </div>
+      </div>
+      
     </div>
   );
 }
