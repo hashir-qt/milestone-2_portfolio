@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import Image from "next/image";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa"; // Import icons from react-icons
-import hero from "../public/hero.jpg";
+import hero from "./public/hero.jpg";
 
 export default function Home() {
   return (
