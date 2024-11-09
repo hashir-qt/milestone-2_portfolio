@@ -8,7 +8,6 @@ import {
   Layout, 
   Palette, 
   Server, 
-  Database,
   GraduationCap,
   BookOpen
 } from 'lucide-react'
@@ -64,14 +63,14 @@ export default function About() {
       <Card className="w-full max-w-3xl mb-8">
         <CardContent className="p-6">
           <p className="lg:text-lg md:text-lg sm:text-xs mb-4 ">
-           "I'm Hashir, a passionate web developer with a keen eye for creating responsive and user-friendly websites. 
+           I am Hashir, a passionate web developer with a keen eye for creating responsive and user friendly websites. 
             With a strong foundation in modern web technologies, I specialize in building robust and scalable applications 
-            that deliver exceptional user experiences."
+            that deliver exceptional user experiences.
           </p>
           <p className="lg:text-lg md:text-lg">
-            "My journey in web development has equipped me with a diverse skill set, allowing me to tackle complex 
-            challenges and bring innovative ideas to life through code. I'm constantly learning and staying 
-            up-to-date with the latest trends in web development to ensure I deliver cutting-edge solutions."
+            My journey in web development has equipped me with a diverse skill set, allowing me to tackle complex 
+            challenges and bring innovative ideas to life through code. I am constantly learning and staying 
+            up-to-date with the latest trends in web development to ensure I deliver cutting-edge solutions.
           </p>
         </CardContent>
       </Card>
