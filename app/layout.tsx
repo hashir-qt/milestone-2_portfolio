@@ -32,7 +32,7 @@ export default function RootLayout({
             </main>
             <footer className="bg-muted py-4">
               <div className="container mx-auto px-4 text-center">
-                © 2024 Hashir's Portfolio. All rights reserved.
+                © 2024 Hashir Interactive Portfolio. All rights reserved.
               </div>
             </footer>
           </div>
