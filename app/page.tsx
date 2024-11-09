@@ -22,7 +22,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center text-center lg:text-left">
         <h1 className="lg:text-6xl sm:text-4xl  font-bold mb-4 ">Hello, I am Hashir</h1>
         <p className="lg:text-xl  mb-8 max-w-2xl">
-          I'm a passionate <span>Front-End</span> web developer specializing in creating responsive and user-friendly websites.
+          I am a passionate <span>Front-End</span> web developer specializing in creating responsive and user friendly websites.
           With expertise in React, Next.js, and modern web technologies, I bring ideas to life through code.
         </p>
 
